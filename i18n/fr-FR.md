@@ -1,5 +1,7 @@
+# Guide de style AngularJS
 # AngularJS Style Guide
 
+*Un guide de styles dogmatique à l'usage d'AngularJS en équipe par [@john_papa](//twitter.com/john_papa)*
 *Opinionated AngularJS style guide for teams by [@john_papa](//twitter.com/john_papa)*
 
 Si vous recherchez un guide de style dogmatique sur la syntaxe, les conventions et la structuration d'applications AngularJS, vous êtes au bon endroit. Ces usages sont fondés sur mon expérience du développement avec [AngularJS](//angularjs.org), mes présentations, [Pluralsight training courses](http://pluralsight.com/training/Authors/Details/john-papa) ainsi que le travail réalisé en équipe.
