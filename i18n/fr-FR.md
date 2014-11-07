@@ -54,16 +54,16 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
   1. [Contributing](#contributing)
   1. [License](#license)
 
-## Single Responsibility
+## Responsabilité unique
 
-### Rule of 1
+### Règle 1
 
-  - Define 1 component per file.  
+  - Définir 1 composant par fichier.  
 
- 	The following example defines the `app` module and its dependencies, defines a controller, and defines a factory all in the same file.  
+ 	L'exemple suivant définit le module `app` et ses dépendances, un contrôleur, et une fabrique, le tout dans un même fichier.  
 
   ```javascript
-  /* avoid */
+  /* à éviter */
   angular
     	.module('app', ['ngRoute'])
     	.controller('SomeController' , SomeController)
@@ -74,10 +74,10 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
   function someFactory() { }
   ```
     
-	The same components are now separated into their own files.
+	Les mêmes composants sont maintenant séparés dans The same components are now separated into their own files.
 
   ```javascript
-  /* recommended */
+  /* recommandé */
   
   // app.module.js
   angular
@@ -85,7 +85,7 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
   ```
 
   ```javascript
-  /* recommended */
+  /* recommandé */
   
   // someController.js
   angular
@@ -96,7 +96,7 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
   ```
 
   ```javascript
-  /* recommended */
+  /* recommandé */
   
   // someFactory.js
   angular
@@ -111,14 +111,15 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
 ## IIFE
 ### JavaScript Closures
 
-  - Wrap AngularJS components in an Immediately Invoked Function Expression (IIFE). 
+  - Encapsuler les composants AngularJS dans une Expression de Fonction Immédiatement Invoquée (Immediately Invoked Function Expression, IIFE).
+  - Wrap AngularJS components in an Immediately Invoked Function Expression (IIFE).
   
-  *Why?*: An IIFE removes variables from the global scope. This helps prevent variables and function declarations from living longer than expected in the global scope, which also helps avoid variable collisions.
+  *Pourquoi ?*: une IIFE préserve ses variables du contexte global. Cela aide This helps prevent variables and function declarations from living longer than expected in the global scope, which also helps avoid variable collisions.
 
-  *Why?*: When your code is minified and bundled into a single file for deployment to a production server, you could have collisions of variables and many global variables. An IIFE protects you against both of these by providing variable scope for each file.
+  *Pourquoi ?*: When your code is minified and bundled into a single file for deployment to a production server, you could have collisions of variables and many global variables. An IIFE protects you against both of these by providing variable scope for each file.
 
   ```javascript
-  /* avoid */
+  /* à éviter */
   // logger.js
   angular
       .module('app')
