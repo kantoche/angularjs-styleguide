@@ -14,6 +14,7 @@ L'objectif de ce guide est de fournir sur la construction d'applications Angular
 The purpose of this style guide is to provide guidance on building AngularJS applications by showing the conventions I use and, more importantly, why I choose them. 
 
 ## Community Awesomeness and Credit
+On ne travaille jamais dans une bulle. Je considère que la communauté AngularJS est un groupe de personnes passionnées et désireuses de partager leur expérience. Ainsi, Todd Motto - un ami et un expert d'AngularJS - et moi  avons collaboré sur de nombreux styles et conventions. Nous nous accordons sur la plupart et nous divergeons sur quelques uns. Je vous encourage à consulter [Todd's  guidelines](https://github.com/toddmotto/angularjs-styleguide) pour prendre connaissance de son approche et de ses différences.
 Never work in a vacuum. I find that the AngularJS community is an incredible group who are passionate about sharing experiences. As such, a friend  and  AngularJS expert Todd Motto and I have collaborated on many styles and conventions. We agree on most, and some we diverge. I encourage you to check out [Todd's  guidelines](https://github.com/toddmotto/angularjs-styleguide) to get a sense for his approach and how it compares.
 
 Many of my styles have been from the many pair programming sessions [Ward Bell](http://twitter.com/wardbell) and I have had. While we don't always agree, my friend Ward has certainly helped influence the ultimate evolution of this guide.
