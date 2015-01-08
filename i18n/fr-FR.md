@@ -21,7 +21,8 @@ Never work in a vacuum. I find that the AngularJS community is an incredible gro
 Many of my styles have been from the many pair programming sessions [Ward Bell](http://twitter.com/wardbell) and I have had. While we don't always agree, my friend Ward has certainly helped influence the ultimate evolution of this guide.
 
 ## See the Styles in a Sample App
-
+While this guide explains the *what*, *why* and *how*, I find it helpful to see them in practice. This guide is accompanied by a sample application that follows these styles and patterns. You can find the [sample application (named modular) here](https://github.com/johnpapa/ng-demos) in the `modular` folder. Feel free to grab it, clone it, or fork it. [Instructions on running it are in its readme](https://github.com/johnpapa/ng-demos/tree/master/modular).
+## See the Styles in a Sample App
 While this guide explains the *what*, *why* and *how*, I find it helpful to see them in practice. This guide is accompanied by a sample application that follows these styles and patterns. You can find the [sample application (named modular) here](https://github.com/johnpapa/ng-demos) in the `modular` folder. Feel free to grab it, clone it, or fork it. [Instructions on running it are in its readme](https://github.com/johnpapa/ng-demos/tree/master/modular).
 
 ##Traductions 
@@ -79,7 +80,7 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
   function someFactory() { }
   ```
     
-	Les mêmes composants sont maintenant séparés dans The same components are now separated into their own files.
+	Les mêmes composants sont désormais rangés dans leurs propres fichiers.
 
   ```javascript
   /* recommandé */
@@ -111,7 +112,7 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
   function someFactory() { }
   ```
 
-**[Back to top](#table-of-contents)**
+**[Retour haut de page](#table-of-contents)**
 
 ## IIFE
 ### JavaScript Closures
@@ -119,9 +120,11 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
   - Encapsuler les composants AngularJS dans une Expression de Fonction Immédiatement Invoquée (Immediately Invoked Function Expression, IIFE).
   - Wrap AngularJS components in an Immediately Invoked Function Expression (IIFE).
   
-  *Pourquoi ?*: une IIFE préserve ses variables du contexte global. Cela aide This helps prevent variables and function declarations from living longer than expected in the global scope, which also helps avoid variable collisions.
+  *Pourquoi ?*: une IIFE préserve ses variables du contexte global. Cela empèche de prolonger de la durée de vie au sein du contexte global des déclarations de variable et de fonction au-delà de ce qui est prévu, ce qui prévient également les collisions de variables.
+This helps prevent variables and function declarations from living longer than expected in the global scope, which also helps avoid variable collisions.
 
-  *Pourquoi ?*: When your code is minified and bundled into a single file for deployment to a production server, you could have collisions of variables and many global variables. An IIFE protects you against both of these by providing variable scope for each file.
+  *Pourquoi ?*: Lorsque votre code est minifié et packagé dans un unique fichier pour un déploiement sur le serveur de production, vous pouvez avoir des collisions de variables et de nombreuses variables globales. Une IIFE vous protège contre ces deux problèmes en fournissant un contexte de variable pour chaque fichier.
+  When your code is minified and bundled into a single file for deployment to a production server, you could have collisions of variables and many global variables. An IIFE protects you against both of these by providing variable scope for each file.
 
   ```javascript
   /* à éviter */
