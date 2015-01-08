@@ -133,7 +133,7 @@ This helps prevent variables and function declarations from living longer than e
       .module('app')
       .factory('logger', logger);
 
-  // logger function is added as a global variable  
+  // la fonction logger est ajoutée comme une variable globale  
   function logger() { }
 
   // storage.js
@@ -141,16 +141,16 @@ This helps prevent variables and function declarations from living longer than e
       .module('app')
       .factory('storage', storage);
 
-  // storage function is added as a global variable  
+  // la fonction storage est ajoutée comme une variable globale  
   function storage() { }
   ```
 
   
   ```javascript
   /**
-   * recommended 
+   * recommandé 
    *
-   * no globals are left behind 
+   * Il ne traine plus aucune variable globale 
    */
 
   // logger.js
